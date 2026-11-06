@@ -418,38 +418,9 @@
     .lb-thumbs img { width: 100%; height: 100%; object-fit: cover; }
 
     /* ============================================================
-       TESTIMONIALS
-       ============================================================ */
-    .reviews { background: var(--ink); color: var(--white); position: relative; overflow: hidden; }
-    .reviews .section-title { color: var(--white); }
-    .reviews .section-title em { color: var(--gold); }
-    .reviews .section-lead { color: var(--on-dark-muted); }
-    .reviews .eyebrow { color: var(--gold); }
-    .reviews-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 48px; }
-    .reviews-top .section-head { margin-bottom: 0; }
-    .review-nav { display: flex; gap: 10px; }
-    .review-track {
-      display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 48px) / 3); gap: 24px;
-      overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-bottom: 8px;
-      scrollbar-width: none;
-    }
-    .review-track::-webkit-scrollbar { display: none; }
-    .review {
-      scroll-snap-align: start; display: flex; flex-direction: column;
-      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09); border-radius: var(--radius-lg); padding: 32px;
-    }
-    .review .stars { color: var(--gold); letter-spacing: 3px; font-size: 15px; }
-    .review blockquote { margin: 18px 0 28px; font-size: 17.5px; color: var(--on-dark); }
-    .review blockquote::before { content: "\201C"; display: block; font-family: Georgia, serif; font-size: 64px; line-height: .6; color: var(--gold); margin-bottom: 12px; }
-    .reviewer { margin-top: auto; display: flex; align-items: center; gap: 14px; }
-    .avatar { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; color: var(--ink); flex-shrink: 0; }
-    .reviewer strong { display: block; }
-    .reviewer span { font-size: 14px; color: var(--on-dark-muted); }
-
-    /* ============================================================
        CONTACT
        ============================================================ */
-    .contact { background: var(--paper); }
+    .contact { background: var(--white); }
     .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 28px; align-items: stretch; }
     .contact-card {
       position: relative; overflow: hidden; border-radius: var(--radius-lg); padding: 44px 40px;
@@ -554,7 +525,6 @@
       .why-photo { display: none; }
       .project-grid { grid-template-columns: 1fr 1fr; }
       .project.wide { grid-column: span 2; aspect-ratio: 16 / 9; }
-      .review-track { grid-auto-columns: calc((100% - 24px) / 2); }
       .contact-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .footer-grid > :first-child { grid-column: 1 / -1; }
@@ -579,7 +549,6 @@
       .stat:nth-child(2n) { border-right: 0; }
       .stat:nth-last-child(-n+2) { border-bottom: 0; }
       .stat strong { font-size: 46px; }
-      .review-track { grid-auto-columns: 88%; }
       .form-row { grid-template-columns: 1fr; }
       .contact-card, .form-card { padding: 32px 22px; }
       .contact-card h3, .form-card h3 { font-size: 34px; }
@@ -619,7 +588,6 @@
         <a href="#services">Services</a>
         <a href="#why-us">Why Us</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#testimonials">Reviews</a>
         <a href="#contact">Contact</a>
         <a href="#contact" class="btn btn-gold">Request a Quote</a>
       </nav>
@@ -635,7 +603,6 @@
       <a href="#services">Services <i class="fas fa-arrow-right"></i></a>
       <a href="#why-us">Why Us <i class="fas fa-arrow-right"></i></a>
       <a href="#portfolio">Portfolio <i class="fas fa-arrow-right"></i></a>
-      <a href="#testimonials">Reviews <i class="fas fa-arrow-right"></i></a>
       <a href="#contact">Contact <i class="fas fa-arrow-right"></i></a>
     </nav>
     <a href="#contact" class="btn btn-gold">Request a Free Quote</a>
@@ -958,53 +925,6 @@
     </section>
 
     <!-- ============================================================
-         TESTIMONIALS
-         ============================================================ -->
-    <section class="section reviews" id="testimonials">
-      <div class="container">
-        <div class="reviews-top">
-          <div class="section-head reveal">
-            <span class="eyebrow">Client reviews</span>
-            <h2 class="section-title">What our <em>clients say</em></h2>
-            <p class="section-lead">Don't just take our word for it. Hear from clients who have experienced the Juhu Enterprise standard first-hand.</p>
-          </div>
-          <div class="review-nav">
-            <button class="lb-btn" id="revPrev" aria-label="Previous review"><i class="fas fa-arrow-left"></i></button>
-            <button class="lb-btn" id="revNext" aria-label="Next review"><i class="fas fa-arrow-right"></i></button>
-          </div>
-        </div>
-
-        <div class="review-track reveal" id="reviewTrack" tabindex="0" aria-label="Client reviews">
-          <figure class="review">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>Juhu Enterprise completely transformed our hotel exterior. The waterproofing work is exceptional. Two rainy seasons in and not a single leak. Highly professional team.</blockquote>
-            <figcaption class="reviewer"><span class="avatar" style="background:var(--teal);color:#fff">DM</span><span><strong>David Mwangi</strong><span>Manager, Dolphin Hotel</span></span></figcaption>
-          </figure>
-          <figure class="review">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>We hired Juhu Enterprise for our commercial complex painting. The colour scheme advice was spot-on and the finish is absolutely flawless. Our tenants love it!</blockquote>
-            <figcaption class="reviewer"><span class="avatar" style="background:var(--gold)">AH</span><span><strong>Amina Hassan</strong><span>Owner, Nyali Bazaar</span></span></figcaption>
-          </figure>
-          <figure class="review">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>The granite countertop installation in my kitchen is stunning. The craftsmanship is top-notch and the team was clean, punctual and very courteous.</blockquote>
-            <figcaption class="reviewer"><span class="avatar" style="background:var(--sky);color:#fff">RC</span><span><strong>Robert Cheruiyot</strong><span>Homeowner, Mombasa</span></span></figcaption>
-          </figure>
-          <figure class="review">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>Excellent work on our residential complex. The waterproofing on the roof terrace was done perfectly. Very fair pricing for the premium quality delivered.</blockquote>
-            <figcaption class="reviewer"><span class="avatar" style="background:var(--leaf);color:#fff">FK</span><span><strong>Fatuma Karimi</strong><span>Property Manager, Mombasa</span></span></figcaption>
-          </figure>
-          <figure class="review">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>I had my entire villa painted inside and out. The attention to detail was remarkable: clean edges, no drips, perfect texture. Will definitely hire again!</blockquote>
-            <figcaption class="reviewer"><span class="avatar" style="background:#E07B39;color:#fff">JO</span><span><strong>James Otieno</strong><span>Villa Owner, Nyali</span></span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
          CONTACT
          ============================================================ -->
     <section class="section contact" id="contact">
@@ -1127,7 +1047,6 @@
             <li><a href="#services">Our services</a></li>
             <li><a href="#why-us">Why choose us</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
             <li><a href="#contact">Get a quote</a></li>
           </ul>
         </div>
@@ -1200,7 +1119,7 @@
         if (e.isIntersecting) navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['services', 'why-us', 'portfolio', 'testimonials', 'contact'].forEach(id => spy.observe(document.getElementById(id)));
+    ['services', 'why-us', 'portfolio', 'contact'].forEach(id => spy.observe(document.getElementById(id)));
 
     /* ---------- Mobile menu ---------- */
     const menuBtn = document.getElementById('menuBtn');
@@ -1355,17 +1274,6 @@
         });
       }, { threshold: 0.4 });
       obs.observe(stats);
-    })();
-
-    /* ---------- Reviews carousel ---------- */
-    (function () {
-      const track = document.getElementById('reviewTrack');
-      const step = () => track.querySelector('.review').getBoundingClientRect().width + 24;
-      document.getElementById('revPrev').addEventListener('click', () => track.scrollBy({ left: -step() }));
-      document.getElementById('revNext').addEventListener('click', () => {
-        const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-        atEnd ? track.scrollTo({ left: 0 }) : track.scrollBy({ left: step() });
-      });
     })();
 
     /* ---------- Contact form (Formspree via fetch) ---------- */
